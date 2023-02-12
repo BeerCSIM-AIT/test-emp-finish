@@ -1,0 +1,17 @@
+table, th, td{
+  border: 1px solid black;
+}
+
+td.colhead{
+  text-align: center;
+  font-weight: bold;
+}
+
+td.empcode{
+  text-align: center;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%
+}
