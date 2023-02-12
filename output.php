@@ -9,7 +9,8 @@
     <link rel='stylesheet' href='pdfstyle.css'>
     <table>
       <tr>
-        <td class='colhead'>empcode</td>
+        <td class='colhead' width='5%'>empcode</td>
+        <td class='colhead' width='10%'>pic</td>
         <td class='colhead'>firstname</td>
         <td class='colhead'>lastname</td>
       </tr>
@@ -19,7 +20,9 @@
   while($row=$qEmp->fetch_object()){
     $output_body .= "
       <tr>
-      <td class='empcode'>$row->empcode</td><td>$row->firstname</td><td>$row->lastname</td>
+      <td class='empcode'>$row->empcode</td>
+      <td><img src='images/$row->id.png'></td>
+      <td>$row->firstname</td><td>$row->lastname</td>
       </tr>
     ";
   }

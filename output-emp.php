@@ -9,10 +9,11 @@
   $output_head = "
     <link rel='stylesheet' href='pdfstyle.css'>
     <h1 style='text-align:center'>Employee Report</h1>
-    <img src='images/1.png'>
+    <hr>
     <table>
       <tr>
         <td class='colhead'>empcode</td>
+        <td class='colhead'>pic</td>
         <td class='colhead'>firstname</td>
         <td class='colhead'>lastname</td>
       </tr>
@@ -22,7 +23,10 @@
   while($row=$qEmp->fetch_object()){
     $output_body .= "
       <tr>
-      <td class='empcode'>$row->empcode</td><td>$row->firstname</td><td>$row->lastname</td>
+        <td class='empcode'>$row->empcode</td>
+        <td><img src='images/$row->id.png'></td>
+        <td>$row->firstname</td>
+        <td>$row->lastname</td>
       </tr>
     ";
   }
